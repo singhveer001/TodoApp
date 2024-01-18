@@ -14,8 +14,8 @@ app.get('/ping',(request,response) => {
     // Response object contains detail about what response will be sent back to the client  
     console.log("Ping Received");
 
-    console.log(request.query);
-    console.log(request.body);
+    console.log(request.query); // help to access custom query parameters comming in the url
+    console.log(request.body); // help to access body params comming in the http request
 
     response.json({message: 'ping recieved '})
 }) // 2 arguments , 1-> route as a string , 2-> callback
@@ -23,6 +23,7 @@ app.get('/ping',(request,response) => {
 
 app.post('/categories/:category/products/:id',(request,response) => {
     console.log(request.params);
+    console.log(request.headers);
     response.json({message : "PING Received"})
 })
 
