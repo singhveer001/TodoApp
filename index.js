@@ -22,8 +22,8 @@ app.get('/ping',(request,response) => {
 
 
 app.post('/categories/:category/products/:id',(request,response) => {
-    console.log(request.params);
-    console.log(request.headers);
+    console.log(request.params); // helps you to access the url params coming in the url
+    console.log(request.headers); // helps you to acces incoming headers in the http request objecct
     response.json({message : "PING Received"})
 })
 
